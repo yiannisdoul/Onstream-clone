@@ -55,7 +55,7 @@
 /* Custom focus rings */
 .focus-ring-red:focus {
   outline: none;
-  ring: 2px solid #ef4444;
+  ring: 2px solid #FF5722;
   ring-opacity: 0.5;
 }
 
