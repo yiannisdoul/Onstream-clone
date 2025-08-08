@@ -769,7 +769,7 @@ app.include_router(api_router)
 @app.get("/")
 async def root():
     return {
-        "message": "OnStream API",
+        "message": "MTV API",
         "version": "1.0.0",
         "docs": "/api/docs"
     }
