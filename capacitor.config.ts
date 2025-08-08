@@ -1,8 +1,8 @@
 import { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
-  appId: 'com.onstream.app',
-  appName: 'OnStream',
+  appId: 'com.moviesandtv.mtv',
+  appName: 'MTV',
   webDir: 'frontend/build',
   server: {
     androidScheme: 'https'
@@ -12,7 +12,7 @@ const config: CapacitorConfig = {
       launchShowDuration: 2000,
       backgroundColor: '#111827',
       showSpinner: false,
-      spinnerColor: '#ef4444'
+      spinnerColor: '#FF5722'
     },
     StatusBar: {
       style: 'dark',

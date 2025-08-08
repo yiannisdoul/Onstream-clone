@@ -1,6 +1,6 @@
 {
-  "name": "OnStream - Free Movies & TV Shows",
-  "short_name": "OnStream",
+  "name": "MTV - Movies & TV Shows",
+  "short_name": "MTV",
   "description": "Stream thousands of movies and TV shows for free on your mobile device",
   "icons": [
     {
@@ -55,7 +55,7 @@
   "start_url": "/",
   "display": "standalone",
   "display_override": ["window-controls-overlay", "standalone"],
-  "theme_color": "#ef4444",
+  "theme_color": "#FF5722",
   "background_color": "#111827",
   "orientation": "portrait-primary",
   "scope": "/",
@@ -69,7 +69,7 @@
       "sizes": "390x844",
       "type": "image/png",
       "platform": "mobile",
-      "label": "OnStream homepage on mobile"
+      "label": "MTV homepage on mobile"
     },
     {
       "src": "/screenshots/mobile-movie.png", 
