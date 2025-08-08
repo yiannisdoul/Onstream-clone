@@ -504,7 +504,7 @@ async def get_trending_content(request: Request, db = Depends(get_db)):
 
 @api_router.get("/genres", response_model=APIResponse)
 @limiter.limit("60/minute")
-async def get_genres_list(request: Request):
+async def get_genres_list_endpoint(request: Request):
     """Get list of available genres."""
     try:
         genres = await get_genres_list()
