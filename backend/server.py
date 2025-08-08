@@ -51,8 +51,8 @@ limiter = Limiter(key_func=get_remote_address)
 
 # Create the main app
 app = FastAPI(
-    title="OnStream API",
-    description="Backend API for OnStream movie streaming application",
+    title="MTV API",
+    description="Backend API for MTV movie streaming application",
     version="1.0.0",
     docs_url="/api/docs",
     redoc_url="/api/redoc"
