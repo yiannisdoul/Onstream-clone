@@ -434,6 +434,7 @@ class OnStreamAPITester:
         
         # Basic connectivity tests
         await self.test_health_check()
+        await self.test_api_status()
         await self.test_api_docs()
         
         # Authentication tests
