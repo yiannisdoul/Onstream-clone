@@ -20,10 +20,10 @@ const Navbar = ({ searchQuery, setSearchQuery }) => {
       <div className="px-4 py-3">
         <div className="flex items-center justify-between max-w-7xl mx-auto">
           <Link to="/" className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-gradient-to-r from-red-600 to-red-700 rounded flex items-center justify-center">
-              <span className="text-white font-bold text-sm">OS</span>
+            <div className="w-8 h-8 bg-gradient-to-r from-orange-600 to-orange-700 rounded flex items-center justify-center">
+              <span className="text-white font-bold text-sm">MTV</span>
             </div>
-            <span className="text-white font-bold text-xl">OnStream</span>
+            <span className="text-white font-bold text-xl">MTV</span>
           </Link>
 
           <form onSubmit={handleSearch} className="flex-1 max-w-md mx-4">
@@ -34,7 +34,7 @@ const Navbar = ({ searchQuery, setSearchQuery }) => {
                 placeholder="Search movies, TV shows..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="pl-10 bg-gray-800 border-gray-700 text-white placeholder-gray-400 focus:border-red-500"
+                className="pl-10 bg-gray-800 border-gray-700 text-white placeholder-gray-400 focus:border-orange-500"
               />
             </div>
           </form>
@@ -70,16 +70,16 @@ const Navbar = ({ searchQuery, setSearchQuery }) => {
       {/* Desktop Navigation */}
       <div className="hidden md:block px-4 pb-3">
         <div className="flex items-center space-x-8 max-w-7xl mx-auto">
-          <Link to="/" className="text-white hover:text-red-400 transition-colors">
+          <Link to="/" className="text-white hover:text-orange-400 transition-colors">
             Home
           </Link>
-          <Link to="/browse" className="text-white hover:text-red-400 transition-colors">
+          <Link to="/browse" className="text-white hover:text-orange-400 transition-colors">
             Browse
           </Link>
-          <Link to="/downloads" className="text-white hover:text-red-400 transition-colors">
+          <Link to="/downloads" className="text-white hover:text-orange-400 transition-colors">
             Downloads
           </Link>
-          <Link to="/watchlist" className="text-white hover:text-red-400 transition-colors">
+          <Link to="/watchlist" className="text-white hover:text-orange-400 transition-colors">
             My List
           </Link>
         </div>

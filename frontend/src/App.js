@@ -31,7 +31,7 @@ function App() {
       metaThemeColor.name = "theme-color";
       document.head.appendChild(metaThemeColor);
     }
-    metaThemeColor.content = "#ef4444";
+    metaThemeColor.content = "#FF5722";
 
     // Set viewport for mobile PWA
     let metaViewport = document.querySelector("meta[name=viewport]");
@@ -46,7 +46,7 @@ function App() {
     const appleTags = [
       { name: "apple-mobile-web-app-capable", content: "yes" },
       { name: "apple-mobile-web-app-status-bar-style", content: "black-translucent" },
-      { name: "apple-mobile-web-app-title", content: "OnStream" }
+      { name: "apple-mobile-web-app-title", content: "MTV" }
     ];
 
     appleTags.forEach(tag => {
@@ -69,7 +69,7 @@ function App() {
     }
 
     // Update document title for PWA
-    document.title = "OnStream - Free Movies & TV Shows";
+    document.title = "MTV - Movies & TV Shows";
   }, []);
 
   return (
