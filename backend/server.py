@@ -786,7 +786,7 @@ async def health_check():
 @app.on_event("startup")
 async def startup_event():
     """Initialize database connection and create admin user."""
-    logger.info("Starting OnStream API...")
+    logger.info("Starting MTV API...")
     
     # Connect to database
     await db_service.connect()
@@ -808,7 +808,7 @@ async def startup_event():
         await db_service.db.users.insert_one(admin_doc)
         logger.info(f"Admin user '{admin_username}' created successfully")
     
-    logger.info("OnStream API started successfully")
+    logger.info("MTV API started successfully")
 
 @app.on_event("shutdown")
 async def shutdown_event():
