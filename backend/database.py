@@ -217,6 +217,8 @@ class DatabaseService:
         
         movies = []
         async for movie_doc in movies_cursor:
+            # Convert ObjectId to string
+            movie_doc["_id"] = str(movie_doc["_id"])
             movies.append(MovieMetadata(**movie_doc))
         
         total_count = await self.db.movies.count_documents(query)
