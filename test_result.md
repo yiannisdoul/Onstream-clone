@@ -102,7 +102,7 @@
 # Testing Data - Main Agent and testing sub agent both should log testing data below this section
 #====================================================================================================
 
-user_problem_statement: "Test the OnStream integrated frontend-backend application thoroughly. This is a complete movie streaming app with real backend integration including TMDB API data, streaming sources, authentication, and user features."
+user_problem_statement: "Rebrand OnStream app to MTV (Movies & TV). Update app name, change Android package ID to com.moviesandtv.mtv, use provided MTV logo for app icons and splash screen, and update theme colors to match the orange-red branding from the logo."
 
 frontend:
   - task: "Homepage Loading with Real TMDB Data"
