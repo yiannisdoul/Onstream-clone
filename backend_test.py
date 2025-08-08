@@ -417,9 +417,14 @@ class OnStreamAPITester:
             self.log_result("Admin Clear Cache", False, "No admin token available")
             return
         
-        # Use admin token for this request
-        headers = {"Authorization": f"Bearer {self.admin_token}"}
-        response = await self.make_request("POST", "/admin/cache/clear", headers=headers)
+        # Temporarily store current token and use admin token
+        original_token = self.auth_token
+        self.auth_token = self.admin_token
+        
+        response = await self.make_request("POST", "/admin/cache/clear", auth_required=True)
+        
+        # Restore original token
+        self.auth_token = original_token
         
         if response["status"] == 200:
             data = response["data"]
