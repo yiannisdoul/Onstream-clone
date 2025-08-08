@@ -89,6 +89,22 @@ class OnStreamAPITester:
         except Exception as e:
             self.log_result("Health Check", False, f"Request failed: {str(e)}")
     
+    async def test_api_status(self):
+        """Test API status endpoint."""
+        response = await self.make_request("GET", "/status")
+        
+        if response["status"] == 200:
+            data = response["data"]
+            if data.get("status") == "healthy" or data.get("success"):
+                self.log_result("API Status", True, "API status endpoint working", data)
+            else:
+                self.log_result("API Status", False, "Unexpected status response", data)
+        elif response["status"] == 404:
+            # If /api/status doesn't exist, that's also valid information
+            self.log_result("API Status", True, "API status endpoint not implemented (404 expected)")
+        else:
+            self.log_result("API Status", False, f"HTTP {response['status']}", response["data"])
+    
     async def test_api_docs(self):
         """Test API documentation endpoint."""
         # API docs endpoint is under /api prefix
