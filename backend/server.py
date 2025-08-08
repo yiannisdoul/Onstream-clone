@@ -813,9 +813,9 @@ async def startup_event():
 @app.on_event("shutdown")
 async def shutdown_event():
     """Clean up resources."""
-    logger.info("Shutting down OnStream API...")
+    logger.info("Shutting down MTV API...")
     await db_service.disconnect()
-    logger.info("OnStream API shut down successfully")
+    logger.info("MTV API shut down successfully")
 
 if __name__ == "__main__":
     import uvicorn
