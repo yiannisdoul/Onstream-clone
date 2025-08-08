@@ -297,6 +297,9 @@ backend:
       - working: true
         agent: "testing"
         comment: "✅ WORKING - TMDB API integration is functional. Real movie data is being fetched and cached successfully. Trending movies, popular content, and movie details are loading from TMDB API with proper metadata."
+      - working: true
+        agent: "testing"
+        comment: "✅ CONFIRMED WORKING AFTER MTV REBRANDING - TMDB API integration remains fully functional. Trending endpoint returns 20 items, popular movies endpoint works correctly, movie details are retrieved successfully. No impact from rebranding."
 
   - task: "Streaming Sources API"
     implemented: true
@@ -315,10 +318,13 @@ backend:
       - working: true
         agent: "testing"
         comment: "✅ STREAMING API NOW WORKING! Final testing confirmed that streaming sources are being successfully served to frontend. The Watch Now button triggers successful API calls that return valid VidSrc.to embed URLs. Backend is properly generating streaming sources for movies. The previous Consumet API issues appear to have been resolved or bypassed."
+      - working: true
+        agent: "testing"
+        comment: "✅ CONFIRMED WORKING AFTER MTV REBRANDING - Streaming sources API remains fully functional. /api/movies/{id}/stream endpoint returns 3 streaming sources for test movie (Fight Club). No impact from rebranding on core streaming functionality."
 
   - task: "User Authentication API"
     implemented: true
-    working: false
+    working: true
     file: "/app/backend/server.py"
     stuck_count: 1
     priority: "high"
@@ -330,6 +336,21 @@ backend:
       - working: false
         agent: "testing"
         comment: "❌ NOT WORKING - Authentication API has issues. Login requests return 200 OK but subsequent /auth/me requests return 401 Unauthorized. JWT token validation is failing. Users cannot maintain authenticated sessions."
+      - working: true
+        agent: "testing"
+        comment: "✅ AUTHENTICATION FIXED AFTER MTV REBRANDING - Fixed critical Pydantic email validation error that was preventing admin login. Updated admin user email from 'admin@onstream.local' to 'admin@mtv.com'. All authentication endpoints now working: user registration, login, admin login, and protected endpoints. JWT tokens are properly validated."
+
+  - task: "Backend Health and Core APIs"
+    implemented: true
+    working: true
+    file: "/app/backend/server.py"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: false
+    status_history:
+      - working: true
+        agent: "testing"
+        comment: "✅ COMPREHENSIVE BACKEND TESTING COMPLETED - All core backend functionality verified after MTV rebranding: 1) Health check endpoint working, 2) TMDB integration fully functional (trending, popular, search, details), 3) Movie endpoints working (/api/movies/trending, /api/movies/popular), 4) Search functionality operational, 5) Streaming sources API working with 3 sources per movie, 6) User authentication fixed and working, 7) Admin endpoints functional, 8) Database operations working correctly. Fixed critical ObjectId validation errors and email validation issues. Backend successfully rebranded from OnStream to MTV with no functionality loss."
 
 metadata:
   created_by: "testing_agent"
