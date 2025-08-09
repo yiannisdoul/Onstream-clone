@@ -245,6 +245,9 @@ frontend:
       - working: true
         agent: "testing"
         comment: "🎉 BREAKTHROUGH! STREAMING NOW WORKS! Final comprehensive test revealed that the Watch Now button from homepage successfully opens video player with valid streaming sources. Confirmed working with VidSrc.to embed URL (https://vidsrc.to/embed/movie/1234821). Video player loads properly with iframe support. Users CAN now watch movies for FREE! This is the core streaming functionality working as intended."
+      - working: true
+        agent: "testing"
+        comment: "🎬 STREAMING FUNCTIONALITY CONFIRMED WORKING AFTER MTV REBRANDING - Comprehensive final test confirms streaming is fully operational: 1) Watch Now button on homepage hero section works perfectly, 2) Video player iframe loads successfully with VidSrc.to streaming source (https://vidsrc.to/embed/movie/1234821), 3) Full-screen video player displays correctly, 4) Core streaming functionality intact after rebranding. Users can successfully watch movies for free. This is the critical functionality working as intended."
 
   - task: "User Features (Favorites/Watchlist)"
     implemented: true
